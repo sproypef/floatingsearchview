@@ -128,7 +128,7 @@ public class ScrollingSearchExampleFragment extends BaseExampleFragment implemen
 
                             @Override
                             public void onResults(List<ColorWrapper> results) {
-                                 //show search results
+                                //show search results
                             }
 
                         });

@@ -18,7 +18,6 @@ package com.arlib.floatingsearchviewdemo.adapter;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +38,7 @@ public class SearchResultsListAdapter extends RecyclerView.Adapter<SearchResults
 
     private int mLastAnimatedItemPosition = -1;
 
-    public interface OnItemClickListener{
+    public interface OnItemClickListener {
         void onClick(ColorWrapper colorWrapper);
     }
 
@@ -63,7 +62,7 @@ public class SearchResultsListAdapter extends RecyclerView.Adapter<SearchResults
         notifyDataSetChanged();
     }
 
-    public void setItemsOnClickListener(OnItemClickListener onClickListener){
+    public void setItemsOnClickListener(OnItemClickListener onClickListener) {
         this.mItemsOnClickListener = onClickListener;
     }
 
@@ -85,12 +84,12 @@ public class SearchResultsListAdapter extends RecyclerView.Adapter<SearchResults
         holder.mColorName.setTextColor(color);
         holder.mColorValue.setTextColor(color);
 
-        if(mLastAnimatedItemPosition < position){
+        if (mLastAnimatedItemPosition < position) {
             animateItem(holder.itemView);
             mLastAnimatedItemPosition = position;
         }
 
-        if(mItemsOnClickListener != null){
+        if (mItemsOnClickListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
